@@ -2,14 +2,15 @@
 
 An independent fork of the Mem0 Codex plugin for the self-hosted Mem0 OSS REST API.
 
+当前版本为 [v0.3.3-local.1 预览版](https://github.com/zbc0315/mem0-local-codex/releases/tag/v0.3.3-local.1)。
+
 Codex 插件与自托管 Mem0 Docker REST 服务直接通信。插件随 Codex 提供
 自动捕获、自动回忆、搜索工具、子代理会话记录和六个记忆操作技能。
-运行时需要 Mem0 Docker 服务，以及 Codex 进程的 PATH 中可用的 Python 3.10 或更新版本。插件不需要额外安装 Python 库。随插件启动的 stdio
-搜索工具是 Codex 发现搜索能力的入口。
+运行需要 Mem0 Docker 服务，以及 Codex 进程的 `PATH` 中可用的 Python 3.10 或更新版本。
+搜索工具由 Codex 随插件启动。
 
-以 Mem0 官方 Codex 插件 0.3.3 为基础，上游提交
-`a330119bda245ad05bf1d5e6779fc588b5f19443`，使用 Apache-2.0 许可证。
-本项目更改了后台协议、凭据来源和遥测行为。
+本项目基于 [Mem0 Codex 插件 0.3.3 的上游提交](https://github.com/mem0ai/mem0/commit/a330119bda245ad05bf1d5e6779fc588b5f19443)，
+修改了后台协议、凭据来源和遥测行为。详见 [Apache-2.0 许可证](LICENSE)和[上游归属与修改说明](NOTICE)。
 
 ## 配置
 
@@ -33,10 +34,10 @@ Codex 插件与自托管 Mem0 Docker REST 服务直接通信。插件随 Codex �
    `MEM0_LOCAL_CONFIG` 覆盖。插件拒绝 Mem0 云域名和 HTTP 重定向，
    API Key 只送给配置的 REST 服务。插件没有联网遥测。
 3. 从桌面端使用的同一 Codex 安装插件，然后重新加载 Codex。插件的
-   搜索工具名为 `mem0-local`。按 Codex 提示检查并信任其钩子。
+   MCP 服务名为 `mem0-local`，提供 `search_memories` 工具。按 Codex 提示检查并信任其钩子。
 
    ```sh
-   codex plugin marketplace add zbc0315/mem0-local-codex
+   codex plugin marketplace add zbc0315/mem0-local-codex --ref v0.3.3-local.1
    codex plugin add mem0-local@self-hosted-memory
    ```
 
