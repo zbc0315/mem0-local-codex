@@ -1,0 +1,20 @@
+{
+  "name": "mem0-local",
+  "version": "0.3.3-local.1",
+  "description": "Automatic Codex memory with your self-hosted Mem0 REST server.",
+  "author": {
+    "name": "zbc0315"
+  },
+  "homepage": "https://github.com/zbc0315/mem0-local-codex",
+  "repository": "https://github.com/zbc0315/mem0-local-codex",
+  "license": "Apache-2.0",
+  "keywords": [
+    "memory",
+    "coding-agents",
+    "continual-learning",
+    "token-efficiency"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

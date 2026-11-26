@@ -1,0 +1,8 @@
+Mem0 Local for Codex
+Independent fork of the Mem0 Codex plugin (Apache License 2.0).
+Upstream: https://github.com/mem0ai/mem0
+Derived from commit a330119bda245ad05bf1d5e6779fc588b5f19443.
+
+Changes include the self-hosted REST client, synchronous capture and scoped
+retrieval/deletion, local configuration, disabled plugin telemetry, plugin
+manifests and marketplace entry, skill references, and integration tests.
